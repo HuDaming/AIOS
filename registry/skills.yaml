@@ -1,0 +1,122 @@
+schema_version: 1
+skills:
+  - id: brainstorming
+    name: Brainstorming
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:brainstorming
+    purpose: Turn an idea into an approved design before implementation
+  - id: writing-plans
+    name: Writing Plans
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:writing-plans
+    purpose: Convert approved requirements into an executable implementation plan
+  - id: systematic-debugging
+    name: Systematic Debugging
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:systematic-debugging
+    purpose: Diagnose failures from reproducible evidence before proposing fixes
+  - id: test-driven-development
+    name: Test Driven Development
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:test-driven-development
+    purpose: Implement behavior through a red-green-refactor cycle
+  - id: verification-before-completion
+    name: Verification Before Completion
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:verification-before-completion
+    purpose: Require fresh evidence before making completion claims
+  - id: requesting-code-review
+    name: Requesting Code Review
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:requesting-code-review
+    purpose: Request structured review against requirements and implementation evidence
+  - id: receiving-code-review
+    name: Receiving Code Review
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:receiving-code-review
+    purpose: Evaluate review feedback technically before applying changes
+  - id: using-git-worktrees
+    name: Using Git Worktrees
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:using-git-worktrees
+    purpose: Create isolated workspaces for implementation without disturbing existing work
+  - id: dispatching-parallel-agents
+    name: Dispatching Parallel Agents
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:dispatching-parallel-agents
+    purpose: Coordinate independent tasks that can safely run in parallel
+  - id: subagent-driven-development
+    name: Subagent Driven Development
+    tier: core
+    scope: global
+    lifecycle: install
+    source: superpowers
+    source_version: 6.2.0
+    owner: Apple情绪化
+    activation: codex-skill-runtime
+    implementation: external
+    source_ref: superpowers:subagent-driven-development
+    purpose: Execute planned tasks with isolated workers and staged review

@@ -1,0 +1,91 @@
+schema_version: 1
+
+tiers:
+  core:
+    purpose: Cross-project engineering methods required by common delivery work
+  product:
+    purpose: Product discovery, strategy, requirements, and prioritization
+  architecture:
+    purpose: System design, boundaries, integration, and technical decisions
+  design:
+    purpose: User experience, visual systems, and interface implementation guidance
+  ai:
+    purpose: Agents, models, retrieval, evaluation, and MCP capabilities
+  domain:
+    purpose: Framework, platform, and business-domain capabilities
+  meta:
+    purpose: Skill creation, governance, discovery, and evaluation
+
+scopes:
+  global:
+    description: Reusable across projects without project-specific assumptions
+  project:
+    description: Bound to one project's context, conventions, or private knowledge
+
+lifecycle:
+  stages:
+    - trial
+    - evaluate
+    - install
+    - distill
+    - maintain
+  transitions:
+    trial:
+      - evaluate
+    evaluate:
+      - install
+    install:
+      - distill
+      - maintain
+    distill:
+      - maintain
+    maintain:
+      - evaluate
+  states:
+    trial:
+      exit_criteria: Candidate can be executed safely on a bounded representative task
+    evaluate:
+      exit_criteria: Evidence and scorecard support an explicit adoption decision
+    install:
+      exit_criteria: Source, version, scope, and activation instructions are registered
+    distill:
+      exit_criteria: Valuable behavior is converted into an owned, traceable capability
+    maintain:
+      exit_criteria: Periodic review confirms compatibility, quality, and continuing value
+
+score_dimensions:
+  - id: relevance
+    description: Alignment with recurring user and project needs
+    weight: 0.20
+  - id: reliability
+    description: Repeatability and correctness under representative tasks
+    weight: 0.20
+  - id: verifiability
+    description: Ability to prove outputs with tests or observable evidence
+    weight: 0.15
+  - id: interoperability
+    description: Compatibility with Codex, repository rules, and other skills
+    weight: 0.15
+  - id: maintainability
+    description: Clarity, ownership, versioning, and update cost
+    weight: 0.10
+  - id: safety
+    description: Permission boundaries, reversibility, and data protection
+    weight: 0.15
+  - id: efficiency
+    description: Time, token, and operational cost relative to value
+    weight: 0.05
+
+scoring:
+  scale:
+    min: 1
+    max: 5
+  weighted_total_min: 1
+  weighted_total_max: 5
+  adoption_threshold: 4
+  rules:
+    - A skill cannot enter install without completing evaluate.
+    - Distillation is optional; an installed external skill may enter maintain directly.
+    - Safety below 4 blocks installation regardless of weighted total.
+    - Project-scoped knowledge must not be promoted to global scope without review.
+    - Every installed or distilled skill must have an owner and source record.

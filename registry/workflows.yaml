@@ -1,0 +1,17 @@
+schema_version: 1
+workflows:
+  - id: feature-development
+    name: Feature Development
+    version: 1
+    status: active
+    path: workflows/feature-development/WORKFLOW.md
+    purpose: Deliver a feature from idea through verified completion and knowledge capture
+    skills:
+      - brainstorming
+      - writing-plans
+      - using-git-worktrees
+      - test-driven-development
+      - systematic-debugging
+      - requesting-code-review
+      - receiving-code-review
+      - verification-before-completion

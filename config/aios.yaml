@@ -1,0 +1,46 @@
+schema_version: 1
+project:
+  id: aios
+  name: AIOS
+  phase: 1
+  description: AI-assisted software engineering capability orchestration repository
+
+layers:
+  skill:
+    path: skills
+    registry: registry/skills.yaml
+    purpose: Reusable, independently evaluable capability
+  agent:
+    path: agents
+    registry: registry/agents.yaml
+    purpose: Role that applies skills within explicit responsibilities
+  workflow:
+    path: workflows
+    registry: registry/workflows.yaml
+    purpose: Gated orchestration of roles, skills, and deliverables
+  knowledge:
+    path: knowledge
+    purpose: Verified and traceable project or domain context
+
+skill_tiers:
+  - core
+  - product
+  - architecture
+  - design
+  - ai
+  - domain
+  - meta
+
+knowledge_types:
+  - patterns
+  - decisions
+  - failures
+  - lessons
+  - research
+
+defaults:
+  skill_scope: global
+  skill_lifecycle: trial
+  naming: kebab-case
+  markdown_extension: .md
+  yaml_extension: .yaml

@@ -1,0 +1,4 @@
+schema_version: 1
+agents: []
+notes:
+  - Agent definitions are intentionally deferred beyond Phase 1.
